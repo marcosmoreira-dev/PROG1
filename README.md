@@ -1,2 +1,2 @@
 # PROG 1
-Repositório usado para aulas de Programação I e Laboratório de Resolução de Problemas da UFF (utilizado Python)
+Repositório usado para as matérias de Programação I e Laboratório de Resolução de Problemas da UFF (utilizado Python)
