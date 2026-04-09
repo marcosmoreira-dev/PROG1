@@ -4,11 +4,11 @@
 # Desclassificado: Qualquer outra situação. Calcule a pontuação final e exiba a situação do candidato.
 
 nota = float(input('Digite a nota da prova técnica: '))
-experiencia = int(input('Digite os anos de experiência na área: '))
+anos = int(input('Digite os anos de experiência na área: '))
 graduacao = input('Você possui graduação na área (S/N): ').upper()
 
-if experiencia <= 10:
-    pontosExperiencia = experiencia * 10
+if anos <= 10:
+    pontosExperiencia = anos * 10
 else:
     pontosExperiencia = 100
 
