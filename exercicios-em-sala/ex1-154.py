@@ -7,3 +7,13 @@ for i in range(len(numeros)):
     if numeros[i] > 10:
         lista.append(numeros[i])
 print(lista)
+
+# Ou usando IN
+
+numbers = [12, -5, 23, 4, 18, 9, 27, 10, -1]
+list = []
+
+for numero in numeros:
+    if numero > 10:
+        list.append(numero)
+print(list)
