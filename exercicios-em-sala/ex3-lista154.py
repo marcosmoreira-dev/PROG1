@@ -9,8 +9,8 @@ segundoMaior = float('-inf')
 
 for valor in valores:
     if valor > maior:
-        segundoMaior = maior
-        maior = valor
+        segundoMaior = maior # -inf   25
+        maior = valor # 25    89
     elif valor > segundoMaior and valor != maior:
-        segundoMaior = valor
+        segundoMaior = valor # 14
 print(segundoMaior)
