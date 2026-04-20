@@ -7,7 +7,7 @@ contaMaior50 = 0
 for i in range(5):
     numero = int(input('Digite um valor inteiro: '))
     
-    if numero > 0 and numero <= 25:
+    if numero >= 0 and numero <= 25:
         conta25 = conta25 + 1
     elif numero > 25 and numero <= 50:
         conta50 = conta50 + 1
