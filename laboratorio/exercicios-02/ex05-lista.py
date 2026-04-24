@@ -5,5 +5,5 @@ novaLista = []
 
 for N in minhaLista:
     if N not in novaLista:
-        novaLista.append(n)
+        novaLista.append(N)
 print(novaLista)

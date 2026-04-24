@@ -11,9 +11,9 @@ print(lista)
 # Ou usando IN
 
 numbers = [12, -5, 23, 4, 18, 9, 27, 10, -1]
-list = []
+nova_lista = []
 
-for numero in numeros:
+for numero in numbers:
     if numero > 10:
-        list.append(numero)
-print(list)
+        nova_lista.append(numero)
+print(nova_lista)
