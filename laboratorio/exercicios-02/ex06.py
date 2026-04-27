@@ -4,13 +4,24 @@
 
 
 valores = [25, 14, 89, 7, 42, 95, 63, 95, 22]
-maior = float('-inf') #-inf = menos infinito
-segundoMaior = float('-inf')
 
+maior = float('-inf')         # Guarda o maior valor encontrado
+segundoMaior = float('-inf')  # Guarda o segundo maior valor
+
+# Percorre cada valor da lista
 for valor in valores:
+    # Verifica se o valor atual é maior que o maior já encontrado
     if valor > maior:
-        segundoMaior = maior # -inf   25
-        maior = valor # 25    89
+        # Antes de atualizar o maior, o antigo maior vira o segundo maior
+        segundoMaior = maior
+        maior = valor
+    
+    # Caso não seja o maior, verifica se ele pode ser o segundo maior
+    # Condições:
+    # 1. Ser maior que o segundoMaior atual
+    # 2. Ser diferente do maior (evita repetir o mesmo valor)
     elif valor > segundoMaior and valor != maior:
-        segundoMaior = valor # 14
+        segundoMaior = valor
+
+# Exibe o segundo maior valor da lista
 print(segundoMaior)
