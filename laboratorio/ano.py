@@ -9,7 +9,7 @@ if ano >= 0:
         elif (mes == 4) or (mes == 6) or (mes == 9) or (mes == 11):
             diaMax = 30
         else:
-            if (ano % 4 == 0) and (ano % 100 == 0) or (ano % 400 == 0):
+            if (ano % 4 == 0) and (ano % 100 != 0) or (ano % 400 == 0):
                 diaMax = 29
             else:
                 diaMax = 28
