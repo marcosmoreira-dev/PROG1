@@ -12,3 +12,17 @@ for i in range(B):
 
 # Exibe o resultado final
     print(f'{A} elevado a {B} é igual a: {resultado}')
+
+##
+
+# Entrada de dados
+a = int(input("Digite a base (A): "))
+b = int(input("Digite o expoente (B): "))
+
+resultado = 1
+
+# Multiplicações sucessivas
+for i in range(b):
+    resultado = resultado * a
+
+print(f"O resultado de {a} elevado a {b} é: {resultado}")
