@@ -3,4 +3,5 @@
 frase = input('Digite uma frase: ')
 fraseLista = frase.split(' ')
 tam = len(fraseLista)
+
 print(f'A quantidade de palavras nessa frase é igual a {tam}')
