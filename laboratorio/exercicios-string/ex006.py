@@ -20,3 +20,21 @@ for letra in frase1:
 print(f'O tamanho da frase é {tam}')
 print(f'A quantidade de vogais é igual a: {contVogais}')
 print(f'A quantidade de consoantes é igual a: {contCons}')
+
+# OU
+# contv = 0
+# contc = 0
+# vogais = 'AEIOU'
+# consoantes = 'BCDFGHJKLMNPQRSTVWXYZ'
+# texto = input('Digite o texto')
+# tam = len(texto)
+#
+# for i in range(tam):
+#   if texto[i] in vogais:
+#       contv += 1
+#   elif texto[i] in cons:
+#       contc += 1
+#
+# print(tam)
+# print(conv)
+# print(conc)
