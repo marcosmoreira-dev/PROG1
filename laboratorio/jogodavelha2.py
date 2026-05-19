@@ -30,26 +30,64 @@ def limpaTela():
     # Adiciona 100 linhas
     print('\n' * 100)
 
-def verificaVencedor():
+def verificaVencedor(vencedor):
     # Verifica linhas de X
-    if velha[0][0] == 'X' and velha[0][1] == 'X' and velha[0][2] == 'X' or velha[1][0] == 'X' and velha[1][1] == 'X' and velha[1][2] == 'X' or velha[2][0] == 'X' and velha[2][1] == 'X' and velha[2][2] == 'X':
+    if (velha[0][0] == 'X' and velha[0][1] == 'X' and velha[0][2] == 'X' 
+        or velha[1][0] == 'X' and velha[1][1] == 'X' and velha[1][2] == 'X' 
+        or velha[2][0] == 'X' and velha[2][1] == 'X' and velha[2][2] == 'X'):
         print('O Jogador X venceu!')
         vencedor = True
         return vencedor
     
     
     # Verifica linhas de 0
-    elif velha[0][0] == 'O' and velha[0][1] == 'O' and velha[0][2] == 'O' or velha[1][0] == 'O' and velha[1][1] == 'O' and velha[1][2] == 'O' or velha[2][0] == 'O' and velha[2][1] == 'O' and velha[2][2] == 'O':
+    elif (
+        velha[0][0] == 'O' and velha[0][1] == 'O' and velha[0][2] == 'O' 
+        or velha[1][0] == 'O' and velha[1][1] == 'O' and velha[1][2] == 'O' 
+        or velha[2][0] == 'O' and velha[2][1] == 'O' and velha[2][2] == 'O'
+        ):
         print('O Jogador O venceu!')
         vencedor = True
         return vencedor
     
     # Verifica colunas de X
-    elif (velha[0][0] == 'X' and velha[1][0] == 'X' and velha[2][0] == 'X') or (velha[0][0] == 'X' and velha[1][0] == 'X' and velha[2][0] == 'X') or velha[0][0] == 'X' and velha[1][0] == 'X' and velha[2][0] == 'X':
+    elif (
+        velha[0][0] == 'X' and velha[1][0] == 'X' and velha[2][0] == 'X' 
+        or velha[0][1] == 'X' and velha[1][1] == 'X' and velha[2][1] == 'X' 
+        or velha[0][2] == 'X' and velha[1][2] == 'X' and velha[2][2] == 'X'
+        ):
        print('O Jogador X venceu!')
        vencedor = True
-       return vencedor 
+       return vencedor
     
+    # Verifica colunas de O
+    elif (
+        velha[0][0] == 'O' and velha[1][0] == 'O' and velha[2][0] == 'O' 
+        or velha[0][1] == 'O' and velha[1][1] == 'O' and velha[2][1] == 'O' 
+        or velha[0][2] == 'O' and velha[1][2] == 'O' and velha[2][2] == 'O'
+        ):
+       print('O Jogador O venceu!')
+       vencedor = True
+       return vencedor
+    
+    # Verifica diagonais para X
+    elif (
+        velha[0][0] == 'X' and velha[1][1] == 'X' and velha[2][2] 
+        or velha[0][2] == 'X' and velha[1][1] == 'X' and velha [2][0] == 'X'
+        ):
+       print('O Jogador X venceu!')
+       vencedor = True
+       return vencedor
+    
+    # Verifica diagonais para O
+    elif (
+        velha[0][0] == 'O' and velha[1][1] == 'O' and velha[2][2] 
+        or velha[0][2] == 'O' and velha[1][1] == 'O' and velha [2][0] == 'O'
+        ):
+       
+       print('O Jogador O venceu!')
+       vencedor = True
+       return vencedor
     return False
 
 vencedor = False
@@ -78,6 +116,10 @@ while vencedor != True and jogadas <= 9:
             velha[linha][coluna] = 'X'
             jogadas += 1
             vez = 'O'
+            limpaTela()
+            cabecalho()
+            verificaVencedor(vencedor)
+            organizaJogo()
         # Caso seja a vez do jogador O
         elif vez == 'O':
             velha[linha][coluna] = 'O'
@@ -85,7 +127,9 @@ while vencedor != True and jogadas <= 9:
             jogadas += 1
         limpaTela()
         cabecalho()
+        verificaVencedor(vencedor)
         organizaJogo()
+        
         
     elif velha[linha][coluna] != ' ':
         cabecalho()
