@@ -1,6 +1,7 @@
 
 # Dúvidas
 # Como limpar a tela?
+# Onde verificar empate?
 
 # Cria a matriz que representa o tabuleiro
 velha = [
@@ -115,7 +116,6 @@ while vencedor == False and jogadas < 9:
                 if verificaVencedor() == True:
                     vencedor = True
                 vez = 'O'
-                
                 organizaJogo()
 
             # Caso seja a vez do jogador O
