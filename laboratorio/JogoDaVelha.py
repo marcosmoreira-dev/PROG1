@@ -31,7 +31,7 @@ def limpaTela():
     # Adiciona 100 linhas
     print('\n' * 100)
 
-def verificaVencedor():
+def verificaVencedor(vez):
     # Verifica linhas de X
     if (velha[0][0] == 'X' and velha[0][1] == 'X' and velha[0][2] == 'X' 
         or velha[1][0] == 'X' and velha[1][1] == 'X' and velha[1][2] == 'X' 
@@ -139,4 +139,4 @@ while vencedor == False and jogadas < 9:
     else: 
         print('A jogada é inválida')
         print('Jogue novamente')      
-    
+print() #EMPATE    
