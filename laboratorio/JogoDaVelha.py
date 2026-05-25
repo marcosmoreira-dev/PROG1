@@ -1,7 +1,4 @@
-
-# Dúvidas
-# Como limpar a tela?
-# Onde verificar empate?
+import os
 
 # Cria a matriz que representa o tabuleiro
 velha = [
@@ -28,61 +25,37 @@ def organizaJogo():
 
 # Cria uma função que "limpa a tela"
 def limpaTela():
-    # Adiciona 100 linhas
-    print('\n' * 100)
+    os.system('cls')
 
-def verificaVencedor():
-    # Verifica linhas de X
-    if (velha[0][0] == 'X' and velha[0][1] == 'X' and velha[0][2] == 'X' 
-        or velha[1][0] == 'X' and velha[1][1] == 'X' and velha[1][2] == 'X' 
-        or velha[2][0] == 'X' and velha[2][1] == 'X' and velha[2][2] == 'X'):
-        print('O Jogador X venceu!')
+def verificaVencedor(vez):
+    # Verifica linhas
+    if (velha[0][0] == vez and velha[0][1] == vez and velha[0][2] == vez 
+        or velha[1][0] == vez and velha[1][1] == vez and velha[1][2] == vez 
+        or velha[2][0] == vez  and velha[2][1] ==vez  and velha[2][2] == vez):
+        print(f'O Jogador {vez} venceu!')
         return True
     
     
-    # Verifica linhas de 0
-    elif (
-        velha[0][0] == 'O' and velha[0][1] == 'O' and velha[0][2] == 'O' 
-        or velha[1][0] == 'O' and velha[1][1] == 'O' and velha[1][2] == 'O' 
-        or velha[2][0] == 'O' and velha[2][1] == 'O' and velha[2][2] == 'O'
-        ):
-        print('O Jogador O venceu!')
-        return True
     
-    # Verifica colunas de X
+    # Verifica colunas
     elif (
-        velha[0][0] == 'X' and velha[1][0] == 'X' and velha[2][0] == 'X' 
-        or velha[0][1] == 'X' and velha[1][1] == 'X' and velha[2][1] == 'X' 
-        or velha[0][2] == 'X' and velha[1][2] == 'X' and velha[2][2] == 'X'
+        velha[0][0] == vez and velha[1][0] == vez and velha[2][0] == vez 
+        or velha[0][1] == vez and velha[1][1] == vez and velha[2][1] == vez 
+        or velha[0][2] == vez and velha[1][2] == vez and velha[2][2] == vez
         ):
-       print('O Jogador X venceu!')
+       print(f'O Jogador {vez} venceu!')
        return True
     
-    # Verifica colunas de O
+    
+    # Verifica diagonais
     elif (
-        velha[0][0] == 'O' and velha[1][0] == 'O' and velha[2][0] == 'O' 
-        or velha[0][1] == 'O' and velha[1][1] == 'O' and velha[2][1] == 'O' 
-        or velha[0][2] == 'O' and velha[1][2] == 'O' and velha[2][2] == 'O'
+        velha[0][0] == vez and velha[1][1] == vez and velha[2][2] == vez
+        or velha[0][2] == vez and velha[1][1] == vez and velha [2][0] == vez
         ):
-       print('O Jogador O venceu!')
+       print(f'O Jogador {vez} venceu!')
        return True
     
-    # Verifica diagonais para X
-    elif (
-        velha[0][0] == 'X' and velha[1][1] == 'X' and velha[2][2] == 'X'
-        or velha[0][2] == 'X' and velha[1][1] == 'X' and velha [2][0] == 'X'
-        ):
-       print('O Jogador X venceu!')
-       return True
     
-    # Verifica diagonais para O
-    elif (
-        velha[0][0] == 'O' and velha[1][1] == 'O' and velha[2][2] == 'O'
-        or velha[0][2] == 'O' and velha[1][1] == 'O' and velha [2][0] == 'O'
-        ):
-       
-       print('O Jogador O venceu!')
-       return True
     return False
 
 vencedor = False
@@ -139,4 +112,5 @@ while vencedor == False and jogadas < 9:
     else: 
         print('A jogada é inválida')
         print('Jogue novamente')      
-    
+print('Deu velha!')
+print('Obrigado por jogar!')
