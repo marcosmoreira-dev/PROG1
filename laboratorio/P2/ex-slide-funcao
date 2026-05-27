@@ -1,0 +1,17 @@
+# Escreva uma função que receba dois números e retorne True se o primeiro número for múltiplo do segundo.
+
+def eMultiplo(a, b):
+    if a % b == 0:
+        return True
+    else:
+        return False
+
+# Escreva uma função que receba o lado (L) de um quadrado e retorne a área.  
+def calculaAreaQuadrado(lado):
+    areaQuadrado = lado * lado
+    return areaQuadrado
+
+# Escreva uma função que receba a base e a altura de um triângulo e retorne a sua área.
+def calculaAreaTriangulo(base, altura):
+    areaTriangulo = (base * altura) / 2
+    return areaTriangulo
