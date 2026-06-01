@@ -26,19 +26,11 @@ def limpaTela():
     print(f"\n" * 100)
 
 def verificaVencedor(vez):
-<<<<<<< HEAD
-    # Verifica linhas de X
-    if (velha[0][0] == 'X' and velha[0][1] == 'X' and velha[0][2] == 'X' 
-        or velha[1][0] == 'X' and velha[1][1] == 'X' and velha[1][2] == 'X' 
-        or velha[2][0] == 'X' and velha[2][1] == 'X' and velha[2][2] == 'X'):
-        print('O Jogador X venceu!')
-=======
     # Verifica se existe vencedor nas linhas
     # Usei o parâmetro/variável "vez" para não precisar repetir o código duas vezes
     if (velha[0][0] == vez and velha[0][1] == vez and velha[0][2] == vez 
         or velha[1][0] == vez and velha[1][1] == vez and velha[1][2] == vez 
         or velha[2][0] == vez  and velha[2][1] ==vez  and velha[2][2] == vez):
->>>>>>> e7d21dde54ccd9f6de2ce4bbd6f9870a9ab7716a
         return True
     
     
@@ -127,8 +119,4 @@ while vencedor == False and jogadas < 9:
     # Caso as variáveis linhas e colunas não estiverem entre 0 e 2, o jogo entra nesse laço
     else: 
         print('A jogada é inválida')
-        print('Jogue novamente')      
-<<<<<<< HEAD
-print() #EMPATE    
-=======
->>>>>>> e7d21dde54ccd9f6de2ce4bbd6f9870a9ab7716a
+        print('Jogue novamente')
