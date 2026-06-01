@@ -1,7 +1,3 @@
-
-# Dúvidas
-# Como limpar a tela?
-
 # Cria a matriz que representa o tabuleiro
 velha = [
     [' ', ' ', ' '],
@@ -100,41 +96,3 @@ cabecalho()
 # Laço aninhado para percorrer a matriz (linhas e colunas)
 # O laço externo pega cada linha
 organizaJogo()
-
-# Cria um laço While para permanecer efetuando enquanto não existe um vencedor e o número de jogadas é menor ou igual a 9.
-while vencedor != True and jogadas <= 9:
-    print(f'É a vez do jogador: {vez}')
-
-    # Pede o input para saber em qual linha e coluna o jogador deseja efetuar a jogada
-    linha = int(input('Insira a linha em que deseja jogar: '))
-    coluna = int(input('Insira a coluna em que deseja jogar: '))
-
-    if velha[linha][coluna] == ' ':
-        # Insere o valor definido no lugar correto
-        # Caso seja a vez do jogador X
-        if vez == 'X':
-            velha[linha][coluna] = 'X'
-            jogadas += 1
-            vez = 'O'
-            limpaTela()
-            cabecalho()
-            verificaVencedor(vencedor)
-            organizaJogo()
-        # Caso seja a vez do jogador O
-        elif vez == 'O':
-            velha[linha][coluna] = 'O'
-            vez = 'X'
-            jogadas += 1
-        limpaTela()
-        cabecalho()
-        verificaVencedor(vencedor)
-        organizaJogo()
-        
-        
-    elif velha[linha][coluna] != ' ':
-        cabecalho()
-        organizaJogo() 
-        print('A jogada é inválida')
-        print('Jogue novamente')
-        limpaTela()
-    
