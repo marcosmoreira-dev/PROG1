@@ -1,0 +1,1 @@
+# Crie uma lista que armazene 3 tuplas, onde cada tupla representa uma coordenada (lat, long). Peça ao usuário para digitar uma nova coordenada, verifique se ela já existe na lista e exiba uma mensagem de "Local já registrado" ou "Novo local adicionado".

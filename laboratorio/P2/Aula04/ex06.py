@@ -1,0 +1,1 @@
+# 6) Escreva um programa que receba uma string e crie um dicionário onde as chaves são os caracteres e os valores são a quantidade de vezes que cada caractere aparece na string.
