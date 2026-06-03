@@ -31,7 +31,7 @@ def buscar_nome_curso(bd, mat):
     existe = bd.get(mat, False)
 
     # Se a matrícula exisitr
-    if existe:
+    if existe: 
         return (bd[mat]["nome"], bd[mat]["curso"]) # Tupla contendo nome e curso
     else: # Se a matrícula não existir
         return (None, None)
@@ -44,7 +44,7 @@ def buscar_nome_curso2(bd, mat):
 
     # Verifica se a variável 'aluno' contém algum valor.
     # Se a matrícula foi encontrada, 'aluno' será um dicionário e a condição será verdadeira.
-    if aluno:
+    if aluno: # é igual a if aluno != nome
         # Retorna uma tupla contendo o nome e o curso do aluno.
         # aluno["nome"] acessa o valor associado à chave "nome".
         # aluno["curso"] acessa o valor associado à chave "curso".
