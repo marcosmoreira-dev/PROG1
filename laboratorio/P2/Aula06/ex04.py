@@ -15,13 +15,44 @@ bd = {
 }
 
 def adicionar_aluno(bd, mat, nome, curso):
-    existe = bd.get(mat, False)
+    # Verifica se a matrícula já está cadastrada
+    existe = bd.get(mat, False) # Procura a chave mat dentro de bd, se encontrar retorna a matrícula, se não encontrar, retorna False.
+
+    # Se a matrícula não existir, cadastra aluno
     if existe == False:
-        aluno = {"nome": nome, "curso": curso}
-        bd[mat] = aluno
+        aluno = {"nome": nome, "curso": curso} # cria um dicionário aluno
+        bd[mat] = aluno # adiciona item no dicionário
         return True
+    # Caso exista, não cadastra
     else:
         return False
+
+def buscar_nome_curso(bd, mat):
+    existe = bd.get(mat, False)
+
+    # Se a matrícula exisitr
+    if existe:
+        return (bd[mat]["nome"], bd[mat]["curso"]) # Tupla contendo nome e curso
+    else: # Se a matrícula não existir
+        return (None, None)
+
+def buscar_nome_curso2(bd, mat):
+    # Procura a matrícula 'mat' no dicionário 'bd'.
+    # Se encontrar, retorna o dicionário com os dados do aluno.
+    # Se não encontrar, retorna None.
+    aluno = bd.get(mat)
+
+    # Verifica se a variável 'aluno' contém algum valor.
+    # Se a matrícula foi encontrada, 'aluno' será um dicionário e a condição será verdadeira.
+    if aluno:
+        # Retorna uma tupla contendo o nome e o curso do aluno.
+        # aluno["nome"] acessa o valor associado à chave "nome".
+        # aluno["curso"] acessa o valor associado à chave "curso".
+        return (aluno["nome"], aluno["curso"])
+    
+    return False
+
+    
     
 novoAluno = adicionar_aluno(bd, 111, "Carlos", "Engenharia")
 print(bd)
