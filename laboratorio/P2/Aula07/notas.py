@@ -22,7 +22,7 @@ arquivo = open('turma.txt', 'r')
 
 for linha in range(1, len(arquivo)):
     linha = arquivo.readline()
-    aluno = linha..strip().split(',')
+    aluno = linha.strip().split(',')
     # nome, n1, n2, n3 = linha.split(',')
     nome = aluno[0]
     notaP1 = float(aluno[1])
