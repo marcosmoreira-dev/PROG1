@@ -14,44 +14,46 @@ def cabecalho():
 def organizaJogo():
 # Laço aninhado para percorrer a matriz (linhas e colunas)
 # O laço externo pega cada linha
-    for l in range(len(velha)):
+    for linha in range(len(velha)):
         # O laço interno pega cada célula da linha atual
-        for c in range(len(velha[l])):
-            print(f' {velha[l][c] }', end=" | ")
+        for coluna in range(len(velha[linha])):
+            print(f' {velha[linha][coluna] }', end=" | ")
         # Pula uma linha para a próxima fileira do tabuleiro
         print('\n---------------')
 
 # Cria uma função que "limpa a tela"
 def limpaTela():
-    print(f"\n" * 100)
+    print(f"\n" * 100)   
+    
 
 def verificaVencedor(vez):
     # Verifica se existe vencedor nas linhas
-    # Usei o parâmetro/variável "vez" para não precisar repetir o código duas vezes
-    if (velha[0][0] == vez and velha[0][1] == vez and velha[0][2] == vez 
-        or velha[1][0] == vez and velha[1][1] == vez and velha[1][2] == vez 
-        or velha[2][0] == vez  and velha[2][1] ==vez  and velha[2][2] == vez):
-        return True
-    
-    
-    
+    # Usei o parâmetro/variável "vez" para não precisar repetir o código duas vezes, além do for pelo mesmo motivo
+    for linha in range(len(velha)):
+        if (velha[linha][0] == vez and
+            velha[linha][1] == vez and
+            velha[linha][2] == vez):
+            return True
+
     # Verifica se existe vencedor nas colunas
-    elif (
-        velha[0][0] == vez and velha[1][0] == vez and velha[2][0] == vez 
-        or velha[0][1] == vez and velha[1][1] == vez and velha[2][1] == vez 
-        or velha[0][2] == vez and velha[1][2] == vez and velha[2][2] == vez
-        ):
-       return True
-    
-    
-    # Verifica se existe vencedor nas diagonais
-    elif (
-        velha[0][0] == vez and velha[1][1] == vez and velha[2][2] == vez
-        or velha[0][2] == vez and velha[1][1] == vez and velha [2][0] == vez
-        ):
-       return True
-    
-    # Caso não exista vencedor em nenhuma ocasião, retorna False (ou seja, indica que não existe vencedor)
+    for coluna in range(len(velha)):
+        if (velha[0][coluna] == vez and
+            velha[1][coluna] == vez and
+            velha[2][coluna] == vez):
+            return True
+
+    # Verifica diagonal principal
+    if (velha[0][0] == vez and
+        velha[1][1] == vez and
+        velha[2][2] == vez):
+        return True
+
+    # Verifica diagonal secundária
+    elif (velha[0][2] == vez and
+        velha[1][1] == vez and
+        velha[2][0] == vez):
+        return True
+
     return False
 
 # Cria uma função para verificar o empate passando o parâmetro do número de jogadas
