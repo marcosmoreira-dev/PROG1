@@ -67,14 +67,14 @@ def verificaEmpate(jogadas):
 
 vencedor = False # Cria uma variável vencedor e inicializa ela com o valor booleano False
 jogadas = 0 # Cria uma variável para a contagem de jogadas e inicializa ela como zero
-vez = 'X' # Cria a variável "vez" e inicializa ela como sendo X, eu poderia ter pedido o input para o usuário, mas para isso seria necessário verificar a entrada para X ou Y
+vez = 'X' # Cria a variável "vez" e inicializa ela como sendo X, eu poderia ter pedido o input para o usuário, mas para isso seria necessário verificar a entrada para X ou O
 
 print(' Bem Vindo ao Jogo da Velha ')
 cabecalho()
 # Mostra tabuleiro do jogo organizado antes de começar
 organizaJogo()
 
-# Cria um laço While para permanecer efetuando enquanto não existe um vencedor e o número de jogadas é menor ou igual a 9.
+# Cria um laço While para permanecer efetuando enquanto não existe um vencedor e o número de jogadas é menor que 9.
 while vencedor == False and jogadas < 9:
     # Print para indicar a vez do jogador usando a variável "vez"
     print(f'É a vez do jogador: {vez}')
