@@ -10,5 +10,6 @@ dic = {
 for chave,valor in dic.items():
     soma = 0 
     for i in valor:
-        soma += valor
+        soma += i
     media = soma/len(valor)
+    print(f"Nome: {chave} \nMédia: {media:.2f}")

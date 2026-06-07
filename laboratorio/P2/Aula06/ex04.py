@@ -44,13 +44,13 @@ def buscar_nome_curso2(bd, mat):
 
     # Verifica se a variável 'aluno' contém algum valor.
     # Se a matrícula foi encontrada, 'aluno' será um dicionário e a condição será verdadeira.
-    if aluno: # é igual a if aluno != nome
+    if aluno: # é igual a if aluno != none
         # Retorna uma tupla contendo o nome e o curso do aluno.
         # aluno["nome"] acessa o valor associado à chave "nome".
         # aluno["curso"] acessa o valor associado à chave "curso".
         return (aluno["nome"], aluno["curso"])
     
-    return False
+    return (None, None)
 
     
     
