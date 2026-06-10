@@ -3,6 +3,7 @@
 def MaxMin(matriz):
     maior = matriz[0][0]
     menor = matriz[0][0]
+    
     for linha in range(len(matriz)):
         for coluna in range(len(matriz[linha])):
             if matriz[linha][coluna] > maior:
