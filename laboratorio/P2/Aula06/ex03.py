@@ -28,6 +28,11 @@ def filtraPorGenero2(lista, genero_alvo):
             livros.append(livro['titulo'])
     return livros
 
-
+def filtraPorGenero3(lista, genero_alvo):
+    livros = []
+    for i in range(len(lista)):
+        if lista[i]["genero"] == genero_alvo:
+            livros.append(lista[i]['titulo'])
+    return livros
 
 
