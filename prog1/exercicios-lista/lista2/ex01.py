@@ -1,0 +1,1 @@
+# Faça um programa em Python para ler, por meio de uma função, uma lista a de elementos inteiros e calcule e imprima o valor de S, sendo e calcule e imprimir quantos termos da série têm o numerador inferior ao denominador.

@@ -1,0 +1,1 @@
+# Escreva um programa em Python que leia uma lista e posteriormente faça a rotação de seus elementos. Imprima a lista antes e depois da rotação.

@@ -1,0 +1,1 @@
+# Faça um programa em Python para ler, por meio de uma função, uma lista A de elementos inteiros, escreva uma função que gere (crie uma nova) uma lista B cujos componentes são os fatoriais dos respectivos componentes de A. Imprima as listas A e B.
